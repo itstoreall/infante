@@ -1,0 +1,123 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.72;
+  letter-spacing: 0.03em;
+  color: #757575;
+  background-color: #ffffff;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  min-width: 100%;
+  height: auto;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  cursor: pointer;
+  padding: 0;
+  border: none;
+}
+
+.relative {
+  position: relative;
+}
+
+.section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  background-color: red;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ccc;
+}
+
+.logo {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #757575;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.logo .icon {
+  display: block;
+  margin-right: 5px;
+  fill: #ffc2cc;
+  -webkit-transform: rotateZ(17deg);
+          transform: rotateZ(17deg);
+}
+
+.logo .title.brand {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
+.product-link {
+  color: #80cbe5;
+}
+/*# sourceMappingURL=main.css.map */
