@@ -34,8 +34,8 @@ body {
 
 img {
   display: block;
-  min-width: 100%;
-  height: auto;
+  // min-width: 100%;
+  // height: auto;
 }
 
 .list {
@@ -53,7 +53,7 @@ img {
   padding: 0;
 }
 
-.button {
+button {
   cursor: pointer;
   padding: 0;
   border: none;

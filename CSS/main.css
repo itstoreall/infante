@@ -34,8 +34,6 @@ body {
 
 img {
   display: block;
-  min-width: 100%;
-  height: auto;
 }
 
 .list {
@@ -53,7 +51,7 @@ img {
   padding: 0;
 }
 
-.button {
+button {
   cursor: pointer;
   padding: 0;
   border: none;
@@ -119,5 +117,105 @@ img {
 
 .product-link {
   color: #80cbe5;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 0;
+  background-color: #333;
+}
+
+.slide-image {
+  width: 100%;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.slider {
+  position: relative;
+  padding: 0px 0px;
+}
+
+.slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  width: 30px;
+  height: 60px;
+  border: none;
+  font-size: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  outline: none;
+  cursor: pointer;
+}
+
+.slider .slick-arrow.slick-prev {
+  left: 0;
+  background: url("../images/sl-arrow_l.svg") 0 0/100% no-repeat;
+}
+
+.slider .slick-arrow.slick-next {
+  right: 0;
+  background: url("../images/sl-arrow_r.svg") 0 0/100% no-repeat;
+}
+
+.slider .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+
+.dots-wrap .slick-dots li {
+  list-style: none;
+  margin: 0px 10px;
+}
+
+.dots-wrap .slick-dots li.slick-active button {
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+
+.dots-wrap .slick-dots li.slick-active button:focus, .dots-wrap .slick-dots li.slick-active button:hover, .dots-wrap .slick-dots li.slick-active button:active {
+  outline: none;
+}
+
+.dots-wrap .slick-dots button {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  font-size: 0;
+  border: none;
+  border-radius: 50%;
+}
+
+.sliderbig__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=main.css.map */
