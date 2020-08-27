@@ -1,12 +1,12 @@
 $(document).ready(function () {
   $(".slider").slick({
-    arrows: true,
+    arrows: false,
     dots: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 500,
     easing: "ease",
-    infinite: true,
+    infinite: false,
     autoplay: false,
     autoplaySpeed: 3000,
     pauseOnHover: true,
@@ -31,7 +31,10 @@ $(document).ready(function () {
       },
       {
         breakpoint: 1200,
-        settings: {},
+        settings: {
+          arrows: true,
+          vertical: false,
+        },
       },
     ],
     mobileFirst: true,

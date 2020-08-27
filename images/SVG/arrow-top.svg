@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13.81" height="7.89" viewBox="0 0 13.81 7.89">
+  <defs>
+    <style>
+      .a {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>arrow-top</title>
+  <path class="a" d="M1.68,7.6,6.91,2.38l5.22,5.23a1,1,0,1,0,1.4-1.4L7.61.3h0a1,1,0,0,0-1.39,0L.29,6.21a1,1,0,0,0,0,1.39A1,1,0,0,0,1.68,7.6Z"/>
+</svg>

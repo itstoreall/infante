@@ -11,23 +11,91 @@
 // Ограничивающая оболочка
 
 .slick-list {
+  background-color: pink;
   overflow: hidden;
 }
 
 // Лента
 
 .slick-track {
+  background-color: green;
   display: block;
 
   > .slider__item {
+    background-color: #151516;
     height: 100vh;
+
+    &.slick-current .slide-title {
+      opacity: 1;
+      transform: translateX(20px);
+    }
 
     &.slick-center {
       opacity: 1;
     }
 
+    & .slide-title {
+      position: relative;
+
+      display: block;
+      width: 90%;
+      margin-bottom: 10px;
+      font-size: 24px;
+      line-height: 1.1;
+      color: pink;
+
+      opacity: 0;
+      // transform: translateY(50px);
+      transition: opacity 700ms ease 500ms, transform 1000ms ease 200ms;
+    }
+
+    & .text {
+      position: relative;
+      color: #999;
+      left: 20px;
+    }
+
+    // Order
+
+    &.order-wrap {
+      @include flex();
+
+      > .order {
+        width: 60%;
+        text-align: center;
+        color: #fff;
+
+        > .title {
+          font-size: 34px;
+          margin-bottom: 20px;
+        }
+
+        > .text {
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+
+        > .button {
+          padding: 15px 35px;
+          font-size: 14px;
+          font-weight: 500;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          border-radius: 4px;
+          background-color: pink;
+
+          &:hover,
+          &:focus {
+            background-color: tomato;
+            outline: none;
+          }
+        }
+      }
+    }
+
     > .image {
       width: 100%;
+      margin-bottom: 20px;
     }
   }
 }
@@ -38,8 +106,9 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 30px;
-  height: 60px;
+  // width: 150px;
+  // height: 130px;
+  padding: 50px;
   font-size: 0;
   z-index: 10;
 
@@ -53,20 +122,20 @@
 
   &.slick-prev {
     left: 0;
-    padding: 30px;
-    background-image: url("../images/sl-arrow_l.svg");
+    // padding: 50px;
+    background-image: url("../images/arrow-bottom.svg");
     background-repeat: no-repeat;
-    background-size: 15px;
+    background-size: 25px;
     background-position: center;
     background-color: transparent;
   }
 
   &.slick-next {
     right: 0;
-    padding: 30px;
-    background-image: url("../images/sl-arrow_r.svg");
+    // padding: 30px;
+    background-image: url("../images/arrow-top.svg");
     background-repeat: no-repeat;
-    background-size: 15px;
+    background-size: 25px;
     background-position: center;
     background-color: transparent;
   }
@@ -74,148 +143,84 @@
 
 // Dots
 
-.dots-wrap .slick-dots {
-  @include flex();
-  padding: 0;
-  margin: 0;
+.dots-wrap {
+  position: fixed;
+  top: 0;
 
-  > li {
-    list-style: none;
-    margin: 0px 10px;
+  // left: 5px;
+  // transform: rotate(90deg);
+  // transform-origin: left;
+  // background-color: tomato;
+  .slick-dots {
+    // @include flex();
 
-    &.slick-active button {
-      background-color: transparent;
-      border: 2px solid #fff;
+    padding: 0;
+    margin: 0;
+
+    > li {
+      list-style: none;
+      height: calc(100vh / 5);
+      // margin: 0px 10px;
+
+      &.slick-active button {
+        background-color: rgba(255, 192, 203, 0.7);
+        // border: 2px solid #fff;
+        transition: all 1000ms ease 300ms;
+        border-radius: 2px;
+      }
+
+      &.slick-active button:focus {
+        outline: none;
+        transition: all 1000ms ease 250ms;
+      }
     }
 
-    &.slick-active button:focus {
-      outline: none;
+    button {
+      display: block;
+      width: 4px;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.1);
+      font-size: 0;
+      // border-radius: 50%;
+      cursor: pointer;
+      // transition: all 250ms ease 500ms;
     }
-  }
-
-  button {
-    width: 10px;
-    height: 10px;
-    background-color: #fff;
-    font-size: 0;
-    border-radius: 50%;
-    cursor: pointer;
   }
 }
 
-// // // Image
+// Media 678
 
-// .slide-image {
-//   width: 100%;
-//   // outline: none;
-// }
+@media screen and (min-width: 768px) {
+  .wrapper {
+    @media screen and (max-width: 1199px) {
+      background-color: yellow;
+    }
+  }
+}
 
-// // Ограничивающая оболочка
-// .slick-list {
-//   overflow: hidden;
-// }
+// Media 1200
+@media screen and (min-width: 1200px) {
+  .slider {
+    max-width: 1000px;
+    margin: 0 auto;
 
-// Лента слайдов .slick-track {
-//   display: flex;
-//   align-items: flex-start;
-// }
+    .slick-track {
+      display: flex;
+      .slider__item > .image {
+        width: 600px;
+      }
+    }
+  }
+}
 
-// // // Конкретный слайдер
+@media screen and (orientation: landscape) {
+  .slick-track {
+    .slider__item > .image {
+      width: 100vh;
+    }
+  }
+}
 
-// .slider {
-//   position: relative;
-//   height: 100vh;
-//   padding: 0px 0px;
-
-//   .slider__item {
-//     width: 100%;
-//     height: 100vh;
-//   }
-// }
-
-// .slider .slick-track {
-//   display: block;
-// }
-
-// // // Arrows
-
-// // .slider .slick-arrow {
-// //   position: absolute;
-// //   top: 50%;
-// //   z-index: 10;
-
-// //   width: 30px;
-// //   height: 60px;
-// //   border: none;
-
-// //   font-size: 0;
-
-// //   transform: translate(-50%, -50%);
-
-// //   outline: none;
-// //   cursor: pointer;
-// // }
-
-// // .slider .slick-arrow.slick-prev {
-// //   left: 0;
-// //   background: url("../images/sl-arrow_l.svg") 0 0 / 100% no-repeat;
-// // }
-
-// // .slider .slick-arrow.slick-next {
-// //   right: 0;
-// //   background: url("../images/sl-arrow_r.svg") 0 0 / 100% no-repeat;
-// // }
-
-// // // Точки
-
-// // .slider .slick-dots {
-// //   @include flex();
-// //   padding: 0;
-// // }
-
-// // .dots-wrap .slick-dots li {
-// //   list-style: none;
-// //   margin: 0px 10px;
-
-// //   &.slick-active button {
-// //     background-color: transparent;
-// //     border: 2px solid #fff;
-
-// //     &:focus,
-// //     &:hover,
-// //     &:active {
-// //       outline: none;
-// //     }
-// //   }
-// // }
-
-// // .dots-wrap .slick-dots button {
-// //   width: 10px;
-// //   height: 10px;
-// //   // padding: 0;
-// //   background-color: #fff;
-
-// //   font-size: 0;
-
-// //   border: none;
-// //   border-radius: 50%;
-// // }
-
-// // // Item
-
-// .slider__item {
-//   @include flex();
-//   height: 294px;
-//   opacity: 0.4;
-//   @include transition(opacity);
-// }
-
-// .slider__item.slick-center {
-//   opacity: 1;
-// }
-
-// // // Sliderbig
-
-// // // .sliderbig__item {
-// // //   @include flex;
-// // // }
+// // // Image // .slide-image { // width: 100%; // // outline: none; // } // // Ограничивающая оболочка // .slick-list { // overflow: hidden; // } // Лента слайдов .slick-track { // display: flex; // align-items: flex-start; // } // // // Конкретный слайдер // .slider { // position: relative; // height: 100vh; // padding: 0px 0px; // .slider__item { // width: 100%; // height: 100vh; // } // } // .slider .slick-track { // display: block; // } // // // Arrows // // .slider .slick-arrow { // // position: absolute; // // top: 50%; // // z-index: 10; // // width: 30px; // // height: 60px; // // border: none; // // font-size: 0; // // transform: translate(-50%, -50%) ; // // outline: none; // // cursor: pointer; // // } // // .slider .slick-arrow.slick-prev { // // left: 0; // // background: url("../images/sl-arrow_l.svg") 0 0 / 100% no-repeat; // // } // // .slider .slick-arrow.slick-next { // // right: 0; // // background: url("../images/sl-arrow_r.svg") 0 0 / 100% no-repeat; // // } // // // Точки // // .slider .slick-dots { // // @include flex() ; // // padding: 0; // // } // // .dots-wrap .slick-dots li { // // list-style: none; // // margin: 0px 10px; // // &.slick-active button { // // background-color: transparent; // // border: 2px solid #fff; // // &:focus,
+// // &:hover,
+// // &:active { // // outline: none; // // } // // } // // } // // .dots-wrap .slick-dots button { // // width: 10px; // // height: 10px; // // // padding: 0; // // background-color: #fff; // // font-size: 0; // // border: none; // // border-radius: 50%; // // } // // // Item // .slider__item { // @include flex() ; // height: 294px; // opacity: 0.4; // @include transition(opacity) ; // } // .slider__item.slick-center { // opacity: 1; // } // // // Sliderbig // // // .sliderbig__item { // // // @include flex; // // // };
