@@ -1,4 +1,4 @@
-.wrapper {
+.slider-wrapper {
   background-color: red;
 }
 
@@ -8,94 +8,113 @@
   position: relative;
 }
 
-// Ограничивающая оболочка
+// Shell
 
 .slick-list {
   background-color: pink;
   overflow: hidden;
 }
 
-// Лента
+// Track
 
 .slick-track {
   background-color: green;
   display: block;
 
+  // Item
+
   > .slider__item {
-    background-color: #151516;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 40px);
+    background-color: #282828;
 
-    &.slick-current .slide-title {
-      opacity: 1;
-      transform: translateX(20px);
+    & .image.prod {
+      width: 100%;
     }
 
-    &.slick-center {
-      opacity: 1;
+    & .prod-meta {
+      height: 100%;
+      padding: 20px;
+
+      & .title.prod {
+        position: relative;
+        left: -20px;
+        display: block;
+        margin-bottom: 10px;
+        font-size: 24px;
+        line-height: 1.1;
+        color: pink;
+        opacity: 0;
+        transition: opacity 700ms $timing-function 400ms,
+          transform 800ms $timing-function 200ms;
+      }
+
+      & .text.prod {
+        position: relative;
+        left: -20px;
+        display: block;
+        color: #999;
+        opacity: 0;
+        transition: opacity 700ms $timing-function 400ms,
+          transform 800ms $timing-function 200ms;
+      }
     }
 
-    & .slide-title {
-      position: relative;
+    &.slick-current {
+      & .title.prod {
+        opacity: 1;
+        transform: translateX(20px);
+      }
 
-      display: block;
-      width: 90%;
-      margin-bottom: 10px;
-      font-size: 24px;
-      line-height: 1.1;
-      color: pink;
-
-      opacity: 0;
-      // transform: translateY(50px);
-      transition: opacity 700ms ease 500ms, transform 1000ms ease 200ms;
-    }
-
-    & .text {
-      position: relative;
-      color: #999;
-      left: 20px;
+      & .text.prod {
+        opacity: 1;
+        transform: translateX(20px);
+      }
     }
 
     // Order
 
     &.order-wrap {
-      @include flex();
+      padding-top: 23vh;
 
-      > .order {
-        width: 60%;
+      // @include flex();
+
+      & .order {
+        padding-left: 20px;
+        padding-right: 20px;
         text-align: center;
-        color: #fff;
 
-        > .title {
-          font-size: 34px;
+        & .title.order {
+          font-size: 28px;
           margin-bottom: 20px;
+          color: #fff;
         }
 
-        > .text {
+        & .text.order {
+          font-size: 16px;
+          margin-bottom: 30px;
+          color: #999;
+        }
+
+        & .button.order {
+          padding: 20px 50px;
           font-size: 18px;
-          margin-bottom: 20px;
-        }
-
-        > .button {
-          padding: 15px 35px;
-          font-size: 14px;
-          font-weight: 500;
+          font-weight: 700;
           letter-spacing: 2px;
           text-transform: uppercase;
+          color: #282828;
           border-radius: 4px;
           background-color: pink;
 
           &:hover,
           &:focus {
-            background-color: tomato;
             outline: none;
+            background-color: rgb(250, 109, 132);
           }
         }
       }
-    }
-
-    > .image {
-      width: 100%;
-      margin-bottom: 20px;
     }
   }
 }
@@ -145,13 +164,19 @@
 
 .dots-wrap {
   position: fixed;
-  top: 0;
+  top: 42px;
+  left: 0;
+  // height: 10px;
+  padding: 2px;
 
   // left: 5px;
   // transform: rotate(90deg);
   // transform-origin: left;
   // background-color: tomato;
   .slick-dots {
+    display: flex;
+    flex-direction: column-reverse;
+
     // @include flex();
 
     padding: 0;
@@ -159,31 +184,31 @@
 
     > li {
       list-style: none;
-      height: calc(100vh / 5);
+      height: calc((100vw - 4px) / 5);
       // margin: 0px 10px;
 
       &.slick-active button {
-        background-color: rgba(255, 192, 203, 0.7);
+        background-color: rgba(255, 192, 203, 1);
         // border: 2px solid #fff;
         transition: all 1000ms ease 300ms;
-        border-radius: 2px;
+        border-radius: 1px;
       }
 
       &.slick-active button:focus {
         outline: none;
-        transition: all 1000ms ease 250ms;
+        // transition: all 1000ms ease 250ms;
       }
-    }
 
-    button {
-      display: block;
-      width: 4px;
-      height: 100%;
-      background-color: rgba(255, 255, 255, 0.1);
-      font-size: 0;
-      // border-radius: 50%;
-      cursor: pointer;
-      // transition: all 250ms ease 500ms;
+      button {
+        display: block;
+        width: 3px;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        font-size: 0;
+        // border-radius: 50%;
+        cursor: pointer;
+        // transition: all 250ms ease 500ms;
+      }
     }
   }
 }

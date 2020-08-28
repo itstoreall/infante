@@ -15,41 +15,112 @@
     <link rel="stylesheet" href="./CSS/main.min.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <!-- Slider -->
+    <header class="page-header">
+      <div class="container">
+        <nav main-nav>
+          <a class="logo" href="./index.html">
+            <span>
+              <svg class="icon" width="21" height="21">
+                <use href="./images/sprite.svg#star-full"></use>
+              </svg>
+            </span>
+            <h1 class="title brand">Инфанта</h1>
+          </a>
+        </nav>
+      </div>
+    </header>
 
-      <div class="slider">
-        <div class="slider__item">
-          <img class="image" data-lazy="./images/product-1-480.jpg" alt="" />
-          <b class="slide-title">Аксессуар со скидкой</b>
-          <p class="text">Современный аксессуар по доступной цене</p>
+    <!-- Slider -->
+
+    <div class="slider-wrapper">
+      <!-- <section class="fullscreen">
+        <div class="fullscreen__body">
+          <div class="change-to-slider"></div>
         </div>
-        <div class="slider__item">
-          <img class="image" data-lazy="./images/product-2-480.jpg" alt="" />
-          <b class="slide-title">Аксессуар со скидкой</b>
-          <p class="text">Современный аксессуар по доступной цене</p>
-        </div>
-        <div class="slider__item">
-          <img class="image" data-lazy="./images/product-1-480.jpg" alt="" />
-          <b class="slide-title">Аксессуар со скидкой</b>
-          <p class="text">Современный аксессуар по доступной цене</p>
-        </div>
-        <div class="slider__item">
-          <img class="image" data-lazy="./images/product-2-480.jpg" alt="" />
-          <b class="slide-title">Аксессуар со скидкой</b>
-          <p class="text">Современный аксессуар по доступной цене</p>
-        </div>
-        <div class="slider__item order-wrap">
+      </section> -->
+
+      <!-- 01 -->
+
+      <ul class="slider list">
+        <li class="slider__item">
+          <img
+            class="image prod"
+            data-lazy="./images/product-1-480.jpg"
+            alt=""
+          />
+          <div class="prod-meta">
+            <b class="title prod">Аксессуар со скидкой</b>
+            <p class="text prod">
+              Современный аксессуар по доступной цене. Изготовление ручной
+              работы
+            </p>
+          </div>
+        </li>
+
+        <!-- 02 -->
+
+        <li class="slider__item">
+          <img
+            class="image prod"
+            data-lazy="./images/product-2-480.jpg"
+            alt=""
+          />
+          <div class="prod-meta">
+            <b class="title prod">Аксессуар со скидкой</b>
+            <p class="text prod">
+              Современный аксессуар по доступной цене. Изготовление ручной
+              работы
+            </p>
+          </div>
+        </li>
+
+        <!-- 03 -->
+
+        <li class="slider__item">
+          <img
+            class="image prod"
+            data-lazy="./images/product-1-480.jpg"
+            alt=""
+          />
+          <div class="prod-meta">
+            <b class="title prod">Аксессуар со скидкой</b>
+            <p class="text prod">
+              Современный аксессуар по доступной цене. Изготовление ручной
+              работы
+            </p>
+          </div>
+        </li>
+
+        <!-- 04 -->
+
+        <li class="slider__item">
+          <img
+            class="image prod"
+            data-lazy="./images/product-2-480.jpg"
+            alt=""
+          />
+          <div class="prod-meta">
+            <b class="title prod">Аксессуар со скидкой</b>
+            <p class="text prod">
+              Современный аксессуар по доступной цене. Изготовление ручной
+              работы
+            </p>
+          </div>
+        </li>
+
+        <!-- Order -->
+
+        <li class="slider__item order-wrap">
           <div class="order">
-            <h3 class="title">Заказать товар</h3>
-            <p class="text">
+            <h3 class="title order">Заказать товар</h3>
+            <p class="text order">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
               reiciendis!
             </p>
-            <button class="button">Заказать</button>
+            <button class="button order">Заказать</button>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
 
       <!-- <a class="link" href="">Go to</a> -->
       <div class="arrows-wrap"></div>
