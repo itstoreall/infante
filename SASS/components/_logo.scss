@@ -7,7 +7,7 @@
   }
 }
 
-// Header logo
+// ======== Header logo ========
 
 .logo {
   display: inline-flex;
@@ -18,13 +18,14 @@
 
   color: $primary-text-color;
   text-decoration: none;
-  border-radius: 3px;
 
   .icon {
     display: block;
+    width: 21px;
+    height: 21px;
     margin-right: 7px;
     fill: $accent-colot;
-    transform: rotateZ(17deg);
+    // transform: rotateZ(17deg);
 
     animation-name: rotateIcon;
     animation-duration: 10000ms;
@@ -38,7 +39,16 @@
     line-height: 1;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    transform: translateY(-1px);
+    transform: translateY(-1.5px);
     color: #999;
   }
 }
+
+// ======== Media 768 ========
+
+// @media screen and (min-height: 768px) {
+//   .logo {
+//     .icon {
+//     }
+//   }
+// }

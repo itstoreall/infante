@@ -15,7 +15,7 @@ $(document).ready(function () {
     pauseOnDotsHover: true,
     draggable: false,
     swipe: true,
-    touchThreshold: 10,
+    touchThreshold: 15,
     touchMove: true,
     waitForAnimate: true,
     centerMode: false,
@@ -34,7 +34,7 @@ $(document).ready(function () {
         breakpoint: 1200,
         settings: {
           arrows: true,
-          vertical: false,
+          vertical: true,
         },
       },
     ],
