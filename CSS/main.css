@@ -68,38 +68,7 @@ button {
   position: relative;
 }
 
-.track-item,
-.order-wrap,
-.slick-slide,
-.slick-current,
-.slick-active {
-  outline: none;
-  outline-color: transparent;
-}
-
-.track-item:hover,
-.order-wrap:hover,
-.slick-slide:hover,
-.slick-current:hover,
-.slick-active:hover {
-  outline: none;
-  outline-color: transparent;
-}
-
-.track-item:focus,
-.order-wrap:focus,
-.slick-slide:focus,
-.slick-current:focus,
-.slick-active:focus {
-  outline: none;
-  outline-color: transparent;
-}
-
-.track-item:active,
-.order-wrap:active,
-.slick-slide:active,
-.slick-current:active,
-.slick-active:active {
+.slick-slide {
   outline: none;
   outline-color: transparent;
 }
@@ -591,9 +560,6 @@ button {
     height: 60px;
     font-size: 0;
     z-index: 10;
-  }
-  .slider-wrapper .arrows-wrap .slick-arrow:focus {
-    outline: none;
   }
   .slider-wrapper .arrows-wrap .slick-arrow.slick-disabled {
     opacity: 0.1;

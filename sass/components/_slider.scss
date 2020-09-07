@@ -374,10 +374,6 @@
         font-size: 0;
         z-index: 10;
 
-        &:focus {
-          outline: none;
-        }
-
         &.slick-disabled {
           opacity: 0.1;
         }
