@@ -64,11 +64,10 @@ button {
   cursor: pointer;
   padding: 0;
   border: none;
+  outline: none;
 }
 
-.relative {
-  position: relative;
-}
+// Outline
 
 .slick-slide {
   outline: none;

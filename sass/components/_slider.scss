@@ -129,6 +129,7 @@
         display: flex;
         align-items: center;
         padding-bottom: 100px;
+        background-color: $accent-color;
 
         .prod-order {
           padding-left: 20px;
@@ -138,7 +139,7 @@
           .title.order {
             font-size: 28px;
             margin-bottom: 20px;
-            color: $primary-white-color;
+            color: $primary-black-color;
           }
 
           .text.order {
@@ -153,9 +154,9 @@
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: $primary-black-color;
+            color: $accent-color;
             border-radius: 4px;
-            background-color: pink;
+            background-color: $primary-black-color;
 
             &:hover,
             &:focus {
@@ -370,7 +371,6 @@
       .slick-arrow {
         width: 60px;
         height: 60px;
-
         font-size: 0;
         z-index: 10;
 
