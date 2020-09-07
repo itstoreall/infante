@@ -28,13 +28,14 @@ $(document).ready(function () {
       },
       {
         breakpoint: 768,
-        settings: {},
+        settings: {
+          arrows: true,
+        },
       },
       {
         breakpoint: 1200,
         settings: {
           arrows: true,
-          vertical: true,
         },
       },
     ],
