@@ -78,3 +78,30 @@ button {
   outline: none;
   outline-color: transparent;
 }
+
+.track-item:hover,
+.order-wrap:hover,
+.slick-slide:hover,
+.slick-current:hover,
+.slick-active:hover {
+  outline: none;
+  outline-color: transparent;
+}
+
+.track-item:focus,
+.order-wrap:focus,
+.slick-slide:focus,
+.slick-current:focus,
+.slick-active:focus {
+  outline: none;
+  outline-color: transparent;
+}
+
+.track-item:active,
+.order-wrap:active,
+.slick-slide:active,
+.slick-current:active,
+.slick-active:active {
+  outline: none;
+  outline-color: transparent;
+}
