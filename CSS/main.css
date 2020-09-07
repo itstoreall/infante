@@ -68,6 +68,15 @@ button {
   position: relative;
 }
 
+.track-item,
+.order-wrap,
+.slick-slide,
+.slick-current,
+.slick-active {
+  outline: none;
+  outline-color: transparent;
+}
+
 .section {
   display: -webkit-box;
   display: -ms-flexbox;

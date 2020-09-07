@@ -69,3 +69,12 @@ button {
 .relative {
   position: relative;
 }
+
+.track-item,
+.order-wrap,
+.slick-slide,
+.slick-current,
+.slick-active {
+  outline: none;
+  outline-color: transparent;
+}
