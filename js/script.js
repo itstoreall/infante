@@ -23,11 +23,13 @@ $(document).ready(function () {
     verticalSwiping: true,
     responsive: [
       {
-        breakpoint: 480,
-        settings: {},
+        breakpoint: 479,
+        settings: {
+          arrows: true,
+        },
       },
       {
-        breakpoint: 768,
+        breakpoint: 767,
         settings: {
           arrows: true,
         },

@@ -171,6 +171,7 @@ button {
 }
 
 .slider-wrapper {
+  position: relative;
   width: 100%;
   height: 100%;
   padding-top: 46px;
@@ -198,6 +199,107 @@ button {
 
 .slider-wrapper .slick-list {
   overflow: hidden;
+}
+
+@media screen and (min-width: 480px) {
+  .slider-wrapper .arrows-wrap {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 30vh;
+    min-height: 160px;
+    padding-top: 5px;
+    padding-right: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .slider-wrapper .arrows-wrap {
+    height: 23vh;
+    min-height: 230px;
+    padding-top: 25px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .slider-wrapper .arrows-wrap {
+    padding-right: 40px;
+  }
+}
+
+.slider-wrapper .arrows-wrap .slick-arrow {
+  width: 60px;
+  height: 60px;
+  font-size: 0;
+  z-index: 10;
+}
+
+@media screen and (min-width: 768px) {
+  .slider-wrapper .arrows-wrap .slick-arrow {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .slider-wrapper .arrows-wrap .slick-arrow {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.slider-wrapper .arrows-wrap .slick-arrow.slick-disabled {
+  opacity: 0.1;
+}
+
+.slider-wrapper .arrows-wrap .slick-arrow.slick-prev {
+  left: 0;
+  background-image: url("../images/arrow-top.svg");
+  background-repeat: no-repeat;
+  background-size: 13px;
+  background-position: center;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .slider-wrapper .arrows-wrap .slick-arrow.slick-prev {
+    background-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .slider-wrapper .arrows-wrap .slick-arrow.slick-prev {
+    background-size: 25px;
+  }
+}
+
+.slider-wrapper .arrows-wrap .slick-arrow.slick-next {
+  right: 0;
+  background-image: url("../images/arrow-bottom.svg");
+  background-repeat: no-repeat;
+  background-size: 13px;
+  background-position: center;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .slider-wrapper .arrows-wrap .slick-arrow.slick-next {
+    background-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .slider-wrapper .arrows-wrap .slick-arrow.slick-next {
+    background-size: 25px;
+  }
 }
 
 .slider {
@@ -273,13 +375,19 @@ button {
   }
 }
 
+@media screen and (min-width: 480px) {
+  .slider .slick-track .track-item .prod-meta {
+    padding-right: 80px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .slider .slick-track .track-item .prod-meta {
     height: 23vh;
     min-height: 230px;
     padding-top: 30px;
     padding-left: 40px;
-    padding-right: 40px;
+    padding-right: 120px;
   }
 }
 
@@ -288,7 +396,7 @@ button {
     min-height: 260px;
     padding-top: 40px;
     padding-left: 50px;
-    padding-right: 50px;
+    padding-right: 150px;
   }
 }
 
@@ -619,29 +727,62 @@ button {
   .slider-wrapper .arrows-wrap {
     position: absolute;
     bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    width: 160px;
+    width: 100px;
     padding-bottom: 6px;
+    padding-right: 0;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 480px) {
+  .slider-wrapper .arrows-wrap {
+    height: auto;
+    min-height: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
 
 @media screen and (orientation: landscape) and (min-width: 768px) {
   .slider-wrapper .arrows-wrap {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 0px;
+    padding-right: 0px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 1024px) {
+  .slider-wrapper .arrows-wrap {
+    width: 120px;
   }
 }
 
 @media screen and (orientation: landscape) {
   .slider-wrapper .arrows-wrap .slick-arrow {
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     font-size: 0;
     z-index: 10;
   }
+}
+
+@media screen and (orientation: landscape) and (min-width: 1024px) {
+  .slider-wrapper .arrows-wrap .slick-arrow {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (orientation: landscape) {
   .slider-wrapper .arrows-wrap .slick-arrow.slick-disabled {
     opacity: 0.1;
   }
@@ -653,6 +794,21 @@ button {
     background-position: center;
     background-color: transparent;
   }
+}
+
+@media screen and (orientation: landscape) and (min-width: 480px) {
+  .slider-wrapper .arrows-wrap .slick-arrow.slick-prev {
+    background-size: 10px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 1024px) {
+  .slider-wrapper .arrows-wrap .slick-arrow.slick-prev {
+    background-size: 13px;
+  }
+}
+
+@media screen and (orientation: landscape) {
   .slider-wrapper .arrows-wrap .slick-arrow.slick-next {
     right: 0;
     background-image: url("../images/arrow-bottom.svg");
@@ -660,6 +816,18 @@ button {
     background-size: 15px;
     background-position: center;
     background-color: transparent;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 480px) {
+  .slider-wrapper .arrows-wrap .slick-arrow.slick-next {
+    background-size: 10px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 1024px) {
+  .slider-wrapper .arrows-wrap .slick-arrow.slick-next {
+    background-size: 13px;
   }
 }
 
@@ -687,8 +855,8 @@ button {
 
 .slick-dots li.slick-active button {
   opacity: 1;
-  -webkit-transition: opacity 1000ms ease;
-  transition: opacity 1000ms ease;
+  -webkit-transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1) 1000ms;
+  transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1) 1000ms;
 }
 
 .slick-dots li.slick-active button:focus {
@@ -702,8 +870,8 @@ button {
   background-color: #ffc2cc;
   opacity: 0;
   font-size: 0;
-  -webkit-transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1) 500ms;
-  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1) 500ms;
+  -webkit-transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1) 1000ms;
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1) 1000ms;
   cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */
