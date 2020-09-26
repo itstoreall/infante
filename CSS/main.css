@@ -539,7 +539,12 @@ button {
 
 .slider .slick-track .track-item.order-wrap .prod-order .button.order:hover, .slider .slick-track .track-item.order-wrap .prod-order .button.order:focus {
   outline: none;
-  background-color: #fa6d84;
+}
+
+@media screen and (min-width: 1024px) {
+  .slider .slick-track .track-item.order-wrap .prod-order .button.order:hover, .slider .slick-track .track-item.order-wrap .prod-order .button.order:focus {
+    background-color: #fa6d84;
+  }
 }
 
 @media screen and (orientation: landscape) {
@@ -913,5 +918,56 @@ button {
 .backdrop .modal .close-modal {
   width: 40px;
   height: 40px;
+  margin-bottom: 100px;
+}
+
+.slider-form .form-field {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.slider-form .form-field .form-label {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: -webkit-transform 200ms linear;
+  transition: -webkit-transform 200ms linear;
+  transition: transform 200ms linear;
+  transition: transform 200ms linear, -webkit-transform 200ms linear;
+}
+
+.slider-form .form-field .form-input {
+  width: 100%;
+  margin: 0;
+  padding: 10px 20px;
+  padding-left: 40px;
+  font: inherit;
+  border-radius: 3px;
+  border: 1px solid #2a2a2a;
+}
+
+.slider-form .form-field .field-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: slateblue;
+}
+
+.slider-form .form-field:focus-within > .field-icon {
+  background-color: royalblue;
+}
+
+.slider-form .form-field:focus-within > .form-label,
+.slider-form .form-field .form-input:not(:placeholder-shown) + .form-label {
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
 }
 /*# sourceMappingURL=main.css.map */

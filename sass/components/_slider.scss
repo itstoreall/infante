@@ -336,7 +336,11 @@
             &:hover,
             &:focus {
               outline: none;
-              background-color: $hover-accent-color;
+              // background-color: $hover-accent-color;
+
+              @media screen and (min-width: 1024px) {
+                background-color: $hover-accent-color;
+              }
             }
           }
         }
