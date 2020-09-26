@@ -601,8 +601,8 @@ button {
 
 @media screen and (orientation: landscape) and (min-width: 568px) {
   .slider-wrapper .slider .slick-track .track-item .prod-meta {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
@@ -630,7 +630,8 @@ button {
 @media screen and (orientation: landscape) {
   .slider-wrapper .slider .slick-track .track-item .prod-meta .title.prod {
     margin-bottom: 15px;
-    font-size: 26px;
+    font-size: 20px;
+    font-weight: 500;
     line-height: 1.2;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -639,15 +640,9 @@ button {
   }
 }
 
-@media screen and (orientation: landscape) and (min-width: 568px) {
-  .slider-wrapper .slider .slick-track .track-item .prod-meta .title.prod {
-    font-size: 20px;
-  }
-}
-
 @media screen and (orientation: landscape) and (min-width: 667px) {
   .slider-wrapper .slider .slick-track .track-item .prod-meta .title.prod {
-    font-size: 26px;
+    font-size: 22px;
   }
 }
 
@@ -873,5 +868,50 @@ button {
   -webkit-transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1) 1000ms;
   transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1) 1000ms;
   cursor: pointer;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 41px);
+  margin-top: 41px;
+  background-color: rgba(135, 206, 235, 0.5);
+  opacity: 1;
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  -webkit-transform: translate(-50%, -50%) scale(1.1);
+          transform: translate(-50%, -50%) scale(1.1);
+  opacity: 0;
+}
+
+.backdrop .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  background-color: thistle;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop .modal .close-modal {
+  width: 40px;
+  height: 40px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -24,7 +24,7 @@
                 <use href="./images/sprite.svg#star-full"></use>
               </svg>
             </span>
-            <h1 class="title brand">Инфанта</h1>
+            <h1 class="title brand">Iнфанта</h1>
           </a>
         </nav>
       </div>
@@ -128,22 +128,37 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
               reiciendis!
             </p>
-            <button class="button order">Заказать</button>
+            <button class="button order" data-modal-open>Заказать</button>
           </div>
         </li>
       </ul>
 
       <!-- Arrows -->
 
-      <!-- <a class="link" href="">Go to</a> -->
       <div class="arrows-wrap"></div>
-      <div class="dots-wrap"></div>
 
       <!-- Dots -->
 
-      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+      <div class="dots-wrap"></div>
+
+      <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
       <script src="./js/slick.min.js"></script>
-      <script src="./js/script.js"></script>
+      <script src="./js/script.js"></script> -->
     </div>
+
+    <!-- Modal -->
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="close-modal" data-modal-close>X</button>
+      </div>
+    </div>
+
+    <!-- JS -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
