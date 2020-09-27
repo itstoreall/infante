@@ -140,10 +140,6 @@
       <!-- Dots -->
 
       <div class="dots-wrap"></div>
-
-      <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-      <script src="./js/slick.min.js"></script>
-      <script src="./js/script.js"></script> -->
     </div>
 
     <!-- Modal -->
@@ -151,17 +147,41 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="close-modal" data-modal-close>X</button>
-        <form class="slider-form">
-          <label for="name" class="form-field">
-            <input type="text" class="form-input" name="name" placeholder=" " />
+        <form
+          action="mail.php"
+          enctype="multipart/form-data"
+          class="slider-form"
+          method="POST"
+        >
+          <input type="hidden" name="admin_email[]" value=" " />
+          <input type="hidden" name="form_subject" value="Новая заявка:" />
+
+          <input type="hidden" name="Model" value="Колье Птичка" />
+
+          <input type="hidden" name="id" value="20KP01" />
+
+          <label class="form-field">
+            <input
+              type="text"
+              data-validate-field="name"
+              class="form-input"
+              name="Name"
+              placeholder=" "
+            />
             <span class="form-label">Имя</span>
             <span class="field-icon"></span>
           </label>
 
-          <div class="form-field">
-            <label for="phone" class="form-label">Телефон</label>
-            <input type="tel" class="form-input" name="phone" id="phone" />
-          </div>
+          <label class="form-field">
+            <input
+              type="tel"
+              data-validate-field="phone"
+              class="form-input"
+              name="Tel"
+              placeholder="+38 (___) ___ __ __"
+            />
+            <span class="field-icon"></span>
+          </label>
 
           <button type="submit">Заказать</button>
         </form>
@@ -174,5 +194,8 @@
     <script src="./js/slick.min.js"></script>
     <script src="./js/slider.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./form/inputmask.min.js"></script>
+    <script src="./form/just-validate.min.js"></script>
+    <script src="./form/form.js"></script>
   </body>
 </html>
