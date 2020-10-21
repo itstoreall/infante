@@ -1,6 +1,10 @@
-let selector = document.querySelectorAll("input[type=tel]");
-let ins = new Inputmask("+38 (999) 999 99 99");
-ins.mask(selector);
+// let selector = document.querySelectorAll("input[type=tel]");
+// let ins = new Inputmask("+38 (999) 999 99 99");
+// ins.mask(selector);
+
+$(function ($) {
+  $('[name="phone"]').mask("+38 (999) 999 99 99");
+});
 
 let validateForms = function (selector, rules) {
   new window.JustValidate(selector, {

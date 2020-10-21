@@ -1,45 +1,120 @@
 .slider-form {
+  width: 100%;
+  padding-bottom: 50px;
+
+  & * {
+    outline: none;
+  }
+
   .form-field {
     position: relative;
     display: block;
     margin-bottom: 20px;
 
-    .form-label {
-      position: absolute;
-      top: 50%;
-      left: 40px;
-      transform: translateY(-50%);
-      transition: transform 200ms linear;
-    }
+    // .form-label {
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 40px;
+    //   transform: translateY(-50%);
+    //   transition: transform 200ms linear;
+    // }
 
     .form-input {
       width: 100%;
+      height: 60px;
       margin: 0;
-      padding: 10px 20px;
-      padding-left: 40px;
+      padding-right: 15px;
+      padding-left: 50px;
       font: inherit;
-      border-radius: 3px;
-      border: 1px solid #2a2a2a;
+      color: $primary-white-color;
+      font-size: 20px;
+      border-radius: 7px;
+      border: 3px solid $input-color;
+      background-color: transparent;
+      transition: box-shadow 250ms $timing-function,
+        border 250ms $timing-function;
+
+      &:focus {
+        color: $primary-white-color;
+        border-color: $primary-white-color;
+        box-shadow: 0 0 0 5px rgba(255, 194, 204, 0.5);
+      }
+
+      &::placeholder {
+        font-size: 20px;
+        color: $input-color;
+      }
+
+      &:focus::placeholder {
+        // visibility: hidden;
+        // font-size: 20px;
+        color: transparent;
+      }
     }
 
     .field-icon {
       position: absolute;
       top: 50%;
-      left: 10px;
+      left: 15px;
       transform: translateY(-50%);
       display: inline-block;
-      width: 20px;
-      height: 20px;
-      background-color: slateblue;
+      width: 26px;
+      height: 26px;
+
+      & .icon {
+        width: 100%;
+        height: 100%;
+        fill: $input-color;
+        transition: fill 250ms $timing-function;
+      }
     }
 
-    &:focus-within > .field-icon {
-      background-color: royalblue;
+    .form-input:not(:placeholder-shown) ~ .field-icon .icon,
+    &:focus-within .field-icon .icon {
+      fill: $accent-color;
     }
 
-    &:focus-within > .form-label,
-    .form-input:not(:placeholder-shown) + .form-label {
-      transform: translateY(-50px);
+    // &:focus-within > .form-label,
+    // .form-input:not(:placeholder-shown) + .form-label {
+    //   transform: translateY(-50px);
+    // }
+  }
+
+  // Button
+
+  // padding: 20px 50px;
+  // font-size: 18px;
+  // font-weight: 700;
+
+  .form-button {
+    position: relative;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $primary-black-color;
+    cursor: pointer;
+    border-radius: 7px;
+    background-color: $accent-color;
+    box-shadow: 0 5px 0 #000000;
+    transition: background-color 250ms $timing-function;
+
+    &:hover {
+      @media screen and (min-width: 1024px) {
+        background-color: $hover-accent-color;
+      }
+    }
+
+    &:active {
+      top: 3px;
+      box-shadow: 0 2px 0 #000000;
     }
   }
 }
@@ -50,7 +125,8 @@
   position: absolute;
   top: 50%;
   right: 0;
-  transform: translateY(-50%);
+  transform: translateY(-40%);
+  font-size: 24px;
 
   padding-right: 20px;
 }

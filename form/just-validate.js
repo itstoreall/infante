@@ -461,8 +461,8 @@ function _defineProperty(obj, key, value) {
     },
 
     defaultMessages: {
-      required: "Укажите информацию",
-      email: "Please, type a valid email",
+      required: "*",
+      email: "*",
       maxLength: " ",
       minLength: " ",
       password: "Password is not valid",

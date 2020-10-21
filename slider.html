@@ -50,7 +50,7 @@
           </div>
 
           <div class="prod-meta">
-            <b class="title prod">Этнический аксессуар со скидкой </b>
+            <span class="title prod">Этнический аксессуар со скидкой. Аксессуар со скидкой. Доставка по Украине</span>
             <p class="text prod">
               Современный аксессуар по доступной цене. Изготовление ручной
               работы Современный аксессуар по доступной цене. Изготовление
@@ -73,9 +73,7 @@
           <div class="prod-meta">
             <b class="title prod">Аксессуар со скидкой</b>
             <p class="text prod">
-              Современный аксессуар по доступной цене. Изготовление ручной
-              работы Современный аксессуар по доступной цене. Изготовление
-              ручной работы
+              Современный аксессуар 
             </p>
           </div>
         </li>
@@ -150,7 +148,11 @@
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="close-modal" data-modal-close>X</button>
+        <button class="close-modal" data-modal-close>
+          <svg class="close-icon" width="32" height="32">
+            <use href="./images/sprite.svg#close-modal"></use>
+          </svg>
+        </button>
         <form
           action="mail.php"
           enctype="multipart/form-data"
@@ -159,9 +161,7 @@
         >
           <input type="hidden" name="admin_email[]" value=" " />
           <input type="hidden" name="form_subject" value="Новая заявка:" />
-
           <input type="hidden" name="Model" value="Колье Птичка" />
-
           <input type="hidden" name="id" value="20KP01" />
 
           <label class="form-field">
@@ -170,10 +170,15 @@
               data-validate-field="name"
               class="form-input"
               name="Name"
-              placeholder=" "
+              placeholder="Ваше имя" 
+              autocomplete="off"
             />
-            <span class="form-label">Имя</span>
-            <span class="field-icon"></span>
+            <!-- <span class="form-label">Имя</span> -->
+            <span class="field-icon">
+              <svg class="icon" width="18" height="18">
+                <use href="./images/sprite.svg#form-icon-name"></use>
+              </svg>
+            </span>
           </label>
 
           <label class="form-field">
@@ -181,13 +186,18 @@
               type="tel"
               data-validate-field="phone"
               class="form-input"
-              name="Tel"
-              placeholder="+38 (___) ___ __ __"
+              name="phone"
+              placeholder="+38" 
+              autocomplete="off"
             />
-            <span class="field-icon"></span>
+            <span class="field-icon">
+              <svg class="icon" width="18" height="18">
+                <use href="./images/sprite.svg#form-icon-tel"></use>
+              </svg>
+            </span>
           </label>
 
-          <button type="submit">Заказать</button>
+          <button class="form-button" type="submit">Отправить</button>
         </form>
       </div>
     </div>
@@ -199,7 +209,8 @@
     <script src="./js/slick.min.js"></script>
     <script src="./js/slider.js"></script>
     <script src="./js/modal.js"></script>
-    <script src="./form/inputmask.min.js"></script>
+    <script src="./form/jquery.maskedinput.js"></script>
+    <!-- <script src="./form/inputmask.min.js"></script> -->
     <script src="./form/just-validate.min.js"></script>
     <script src="./form/form.js"></script>
   </body>
