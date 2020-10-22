@@ -43,7 +43,7 @@
       @media screen and (orientation: landscape) {
         display: flex;
         min-height: 270px;
-        max-height: 950px;
+        max-height: 1024px;
       }
 
       // --- Thumb ---
@@ -194,13 +194,14 @@
 
       &.order-wrap {
         display: flex;
+        justify-content: center;
         align-items: center;
         background-color: $accent-color;
 
-        @media screen and (min-width: 768px) {
-          flex-direction: row;
-          justify-content: center;
-        }
+        // @media screen and (min-width: 768px) {
+        //   flex-direction: row;
+        //   justify-content: center;
+        // }
 
         // --- Order ---
 
@@ -346,7 +347,7 @@
       bottom: 6px;
       transform: translateX(50%);
       display: block;
-      border-top: 1px solid #fff;
+      // border-top: 1px solid #fff;
 
       .slick-arrow {
         width: 80px;

@@ -1,6 +1,18 @@
 .slider-form {
   width: 100%;
-  padding-bottom: 50px;
+  // padding-bottom: 50px;
+
+  @media screen and (orientation: landscape) {
+    width: 65%;
+
+    @media screen and (min-width: 800px) {
+      width: 50%;
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 400px;
+    }
+  }
 
   & * {
     outline: none;
@@ -11,6 +23,7 @@
     display: block;
     margin-bottom: 20px;
 
+    // Не удалять
     // .form-label {
     //   position: absolute;
     //   top: 50%;
